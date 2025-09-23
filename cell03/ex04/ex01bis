@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ex01 jQuery</title>
+  <style>
+    #balloon {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      border-radius: 50%;
+      margin: 50px auto;
+      cursor: pointer;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <div id="balloon"></div>
+</body>
+</html>
+$(document).ready(function () {
+  let size = 200;
+  let colors = ["red", "green", "blue"];
+  let colorIndex = 0;
+
+  function updateBalloon() {
+    $("#balloon").css({
+      width: size + "px",
+      height: size + "px",
+      backgroundColor: colors[colorIndex]
+    });
+  }
+
+  $("#balloon").click(function () {
+    size += 10;
+    if (size > 420) {
+      size = 200;
+      colorIndex = 0;
+    } else {
+      colorIndex = (colorIndex + 1) % colors.length;
+    }
+    updateBalloon();
+  });
+
+  $("#balloon").mouseleave(function () {
+    if (size > 200) size -= 5;
+    colorIndex = (colorIndex - 1 + colors.length) % colors.length;
+    updateBalloon();
+  });
+});
 
