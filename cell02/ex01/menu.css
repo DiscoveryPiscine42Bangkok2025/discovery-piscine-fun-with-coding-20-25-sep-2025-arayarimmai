@@ -1,1 +1,50 @@
+body {
+    font-family: sans-serif;
+}
 
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #ddd;
+    display: flex;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.menu li a:hover {
+    background: #bbb;
+}
+
+/* ซ่อน submenu */
+.submenu {
+    display: none;
+    position: absolute;
+    background: #eee;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* แสดง submenu เมื่อ hover */
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu li a {
+    padding: 8px 12px;
+    display: block;
+}
+
+.submenu li a:hover {
+    background: #ccc;
+}
