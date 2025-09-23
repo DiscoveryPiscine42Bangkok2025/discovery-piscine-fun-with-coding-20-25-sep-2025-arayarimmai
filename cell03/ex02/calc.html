@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>It's over 9000</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .calc {
+            border: 1px solid #000;
+            padding: 15px;
+            text-align: center;
+            width: 250px;
+        }
+        input, select {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calc">
+        <input type="number" id="left" placeholder="Left number">
+        <select id="op">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="number" id="right" placeholder="Right number">
+        <br>
+        <input type="submit" value="Try me!" onclick="calculate()">
+        <p id="result"></p>
+    </div>
 
+    <script>
+        function calculate() {
+            let left = parseFloat(document.getElementById("left").value);
+            let right = parseFloat(document.getElementById("right").value);
+            let op = document.getElementById("op").value;
+            let res;
+
+            if (isNaN(left) || isNaN(right)) {
+                res = "Please enter numbers!";
+            } else {
+                switch(op) {
+                    case "+": res = left + right; break;
+                    case "-": res = left - right; break;
+                    case "*": res = left * right; break;
+                    case "/": 
+                        res = right === 0 ? "Division by zero!" : left / right;
+                        break;
+                    case "%": 
+                        res = right === 0 ? "Modulo by zero!" : left % right;
+                        break;
+                }
+            }
+            document.getElementById("result").innerText = res;
+        }
+    </script>
+</body>
+</html>
