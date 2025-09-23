@@ -1,1 +1,43 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: sans-serif;
+}
 
+.parallax {
+  height: 100vh; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.section1 {
+  background: linear-gradient(to bottom right, #3498db, #2ecc71);
+}
+
+.section2 {
+  background: linear-gradient(to bottom right, #e74c3c, #f39c12);
+}
+
+.caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 28px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 15px 25px;
+  border-radius: 5px;
+}
+
+.text-block {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  font-size: 22px;
+}
