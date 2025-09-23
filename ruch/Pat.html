@@ -1,27 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pat</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pat</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 350px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    img { width: 100%; height: 350px; border-radius: 12px; object-fit: cover; margin-bottom: 15px; }
+    h2, h4 { color: #007BFF; margin: 10px 0; }
+    p { margin: 5px 0; color: #333; }
+    .details { display: none; text-align: left; margin-top: 15px; }
+    .contact a { margin: 0 8px; font-size: 1.5rem; text-decoration: none; color: #007BFF; }
+    .back-btn { margin-top: 15px; padding: 10px 20px; background: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; display: inline-block; }
+    .contact a img {
+      height: 30px;
+      width: 30px;
+    }
+  </style>
 </head>
-<body style="font-family: Arial, sans-serif; background-color: #f4f4f9; margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh; text-align: center;">
+<body>
+  <div class="card" onclick="toggleDetails()">
+    <img src="Pat.webp" alt="Pat">
+    <h2>Pat</h2>
+    <p><strong>Age:</strong> 18</p>
 
-    <div style="background-color: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 300px;">
-        <h1 style="font-size: 2em; color: #333;">Hello</h1>
-        
-        <img src="" alt="Image" style="width: 100%; height: auto; margin-bottom: 20px; border-radius: 8px;">
-        
-        <p style="font-size: 1.2em; color: #555;">Name: asdfasdf</p>
-        <p style="font-size: 1.2em; color: #555;">Age: sdfsadf</p>
-        <p style="font-size: 1.2em; color: #555;">School: Not Provided</p>
-        
-        <a href="port.html">
-            <button style="padding: 10px 20px; font-size: 1em; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;">
-                Back
-            </button>
-        </a>
+    <div class="details">
+      <h4>💻 Skills</h4>
+      <p>Have a boyfriend, Play roblox pro-player</p>
+      <h4>📚 Education</h4>
+      <p>Studying kmitl business school</p>
+      <h4>🏆 Achievements</h4>
+      <p>Lovely Boyfriend</p>
+      <h4>🎯 Interests</h4>
+      <p>Business Owner</p>
+      <div class="contact">
+        <a href="https://instagram.com" target="_blank"><img src="social.png"></a>
+        <a href="https://github.com" target="_blank"><img src="facebook.png"></a>
+        <a href="https://linkedin.com" target="_blank"><img src="github.png" alt=""></a>
+      </div>
     </div>
 
+    <a href="port.html" class="back-btn">⬅ Back to Portfolio</a>
+  </div>
+
+  <script>
+    function toggleDetails() {
+      const details = document.querySelector(".details");
+      details.style.display = details.style.display === "block" ? "none" : "block";
+    }
+  </script>
 </body>
 </html>

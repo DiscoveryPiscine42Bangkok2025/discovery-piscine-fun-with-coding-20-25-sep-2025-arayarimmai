@@ -1,18 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>job</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mean</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 350px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    img { width: 100%; height: 350px; border-radius: 12px; object-fit: cover; margin-bottom: 15px; }
+    h2, h4 { color: #007BFF; margin: 10px 0; }
+    p { margin: 5px 0; color: #333; }
+    .details { display: none; text-align: left; margin-top: 15px; }
+    .contact a { margin: 0 8px; font-size: 1.5rem; text-decoration: none; color: #007BFF; }
+    .back-btn { margin-top: 15px; padding: 10px 20px; background: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; display: inline-block; }
+    .contact a img {
+      height: 30px;
+      width: 30px;
+    }
+  </style>
 </head>
 <body>
-    <div class="row">
-        <div class="col">name</div>
-        <div class="col">job</div>
-        <div class="col">person</div>8
+  <div class="card" onclick="toggleDetails()">
+    <img src="Mean.webp" alt="Mean">
+    <h2>Mean</h2>
+    <p><strong>Age:</strong> 18</p>
+
+    <div class="details">
+      <h4>💻 Skills </h4>
+      <p>capcut, canva, minecrafe </p>
+      <h4>📚 Education</h4>
+      <p>Studying  kmitl business school</p>
+      <h4>🏆 Achievements</h4>
+      <p>Admit the kmitl, Defeat the ender dragon</p>
+      <h4>🎯 Interests</h4>
+      <p>Sleep ,Watching Series within 1 Day</p>
+      <div class="contact">
+        <a href="https://instagram.com" target="_blank"><img src="social.png"></a>
+        <a href="https://github.com" target="_blank"><img src="facebook.png"></a>
+        <a href="https://linkedin.com" target="_blank"><img src="github.png" alt=""></a>
+      </div>
     </div>
-    <img src="" alt="">
-    <a href=""><img src="facebook.jpg" width="20px" /></a>
-    <a href="port.html"><button>back</button></a>
+
+    <a href="port.html" class="back-btn">⬅ Back to Portfolio</a>
+  </div>
+
+  <script>
+    function toggleDetails() {
+      const details = document.querySelector(".details");
+      details.style.display = details.style.display === "block" ? "none" : "block";
+    }
+  </script>
 </body>
 </html>
