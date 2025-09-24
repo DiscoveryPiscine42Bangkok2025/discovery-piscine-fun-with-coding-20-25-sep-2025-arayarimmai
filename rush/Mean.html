@@ -28,7 +28,7 @@
     img { width: 100%; height: 350px; border-radius: 12px; object-fit: cover; margin-bottom: 15px; }
     h2, h4 { color: #007BFF; margin: 10px 0; }
     p { margin: 5px 0; color: #333; }
-    .details { display: none; text-align: left; margin-top: 15px; }
+    .details { display: block; text-align: left; margin-top: 15px; }
     .contact a { margin: 0 8px; font-size: 1.5rem; text-decoration: none; color: #007BFF; }
     .back-btn { margin-top: 15px; padding: 10px 20px; background: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; display: inline-block; }
     .contact a img {
@@ -62,11 +62,6 @@
     <a href="port.html" class="back-btn">⬅ Back to Portfolio</a>
   </div>
 
-  <script>
-    function toggleDetails() {
-      const details = document.querySelector(".details");
-      details.style.display = details.style.display === "block" ? "none" : "block";
-    }
-  </script>
+  
 </body>
 </html>
